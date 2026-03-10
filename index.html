@@ -19,7 +19,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.png" type="image/png">
+  <link rel="icon" href="./static/images/logo.png" type="image/png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- fontawesome loaded via CDN above -->
@@ -37,12 +37,12 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning</h1>
+          <h1 class="title is-1 publication-title"> <img src="./static/images/logo.png" style="height: 95px; vertical-align: middle; margin-right: 10px;">SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a style="pointer-events: none; color: inherit;">Zhenyu Wu</a><sup>*</sup>,</span>
+              <a href="https://allenhuanggit.github.io/">Anlun Huang</a><sup>*</sup>,</span>
             <span class="author-block">
-              <a style="pointer-events: none; color: inherit;">Anlun Huang</a><sup>*</sup>,</span>
+              <a style="pointer-events: none; color: inherit;">Zhenyu Wu</a><sup>*</sup>,</span>
             <span class="author-block">
               <a href="https://soofiyan.github.io/SoofiyanAtar">Soofiyan Atar</a>,
             </span>
@@ -55,7 +55,8 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <img src="./static/images/UCSD_logo.png" alt="UC San Diego" style="height: 50px; margin-top: 10px;">
+            <img src="./static/images/UCSD_logo.png" alt="UC San Diego" style="height: 50px; margin-top: 10px; margin-right: 40px;">
+            <img src="./static/images/arclab_logo.png" alt="ArcLab" style="height: 62px; margin-top: 10px;">
             <!-- <span class="author-block"><sup>*</sup>Equal Contribution</span> -->
           </div>
 
@@ -126,8 +127,8 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <strong style="color: #1a1a1a;">ReST-RL</strong> enables a Unitree G1 humanoid to perform the <strong style="color: #1a1a1a;">SteadyTray</strong> task in a real-world setting.
-        The robot keeps the tray level to prevent fluid sloshing, glass tipping, and payload falling during transport.
+        <strong style="color: #1a1a1a;">ReST-RL</strong> enables a Unitree G1 humanoid to perform the <strong style="color: #1a1a1a;">SteadyTray</strong> (transporting unsecured 
+          objects on a tray with a bipedal humanoid robot)  task in a real-world setting.
       </h2>
     </div>
   </div>
@@ -146,8 +147,7 @@
           Stabilizing unsecured payloads against the inherent oscillations of dynamic bipedal locomotion 
           remains a critical engineering bottleneck for humanoids in unstructured environments. To solve 
           this, we introduce <strong style="color: #1a1a1a;">ReST-RL</strong>, a hierarchical reinforcement learning architecture that explicitly 
-          decouples locomotion from payload stabilization, evaluated via the <strong style="color: #1a1a1a;">SteadyTray</strong>
-          benchmark. Rather than relying on monolithic end-to-end learning, our framework integrates a robust 
+          decouples locomotion from payload stabilization, evaluated via the <strong style="color: #1a1a1a;">SteadyTray</strong> benchmark. Rather than relying on monolithic end-to-end learning, our framework integrates a robust 
           base locomotion policy with a dynamic residual module engineered to actively cancel gait-induced 
           perturbations at the end-effector. This architectural separation ensures steady tray transport without degrading 
           the underlying bipedal stability. In simulation, the residual design significantly outperforms end-to-end baselines 
@@ -186,6 +186,18 @@
       </div>
     </div>
     <!--/ Method Overview. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Stable Payload Transport</h2>
+    <p class="has-text-centered" style="margin-top: 1rem;">
+      <strong style="color: #1a1a1a;">ReST-RL</strong> maintains a level tray during transport, preventing fluid sloshing, glass tipping, and payload drop.
+    </p>
+    <video autoplay muted loop playsinline controls width="100%">
+      <source src="./static/videos/transport.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
