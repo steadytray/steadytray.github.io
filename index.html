@@ -37,7 +37,12 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"> <img src="./static/images/logo.png" style="height: 95px; vertical-align: middle; margin-right: 10px;">SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning</h1>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+            <img src="./static/images/logo.png" style="height: 95px; flex-shrink: 0;">
+            <h1 class="title is-1 publication-title" style="margin: 0; text-align: justify;">
+              <span style="color: #1E72B8;">SteadyTray</span>: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning
+            </h1>
+          </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://allenhuanggit.github.io/">Anlun Huang</a><sup>*</sup>,</span>
@@ -57,14 +62,16 @@
           <div class="is-size-5 publication-authors">
             <img src="./static/images/UCSD_logo.png" alt="UC San Diego" style="height: 50px; margin-top: 10px; margin-right: 40px;">
             <img src="./static/images/arclab_logo.png" alt="ArcLab" style="height: 62px; margin-top: 10px;">
-            <!-- <span class="author-block"><sup>*</sup>Equal Contribution</span> -->
+          </div>
+          <div class="is-size-6" style="margin-top: 8px; color: #555;">
+            <sup>*†</sup>Equal Contribution
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="./static/docs/SteadyTray.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -83,7 +90,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="https://youtu.be/hBYnM1GcxbU"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -122,10 +129,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline controls width="100%">
-        <source src="./static/videos/demo.mp4"
-                type="video/mp4">
-      </video>
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/hBYnM1GcxbU?rel=0&showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
       <h2 class="subtitle has-text-centered">
         <strong style="color: #1a1a1a;">ReST-RL</strong> enables a Unitree G1 humanoid to perform the <strong style="color: #1a1a1a;">SteadyTray</strong> (transporting unsecured 
           objects on a tray with a bipedal humanoid robot)  task in a real-world setting.
@@ -198,6 +205,20 @@
     <video autoplay muted loop playsinline controls width="100%">
       <source src="./static/videos/scene.mp4" type="video/mp4">
     </video>
+    <div class="columns" style="margin-top: 1.5rem;">
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">Baseline</h3>
+        <video autoplay muted loop playsinline controls style="width: 100%;">
+          <source src="./static/videos/loco_push_baseline.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">Ours</h3>
+        <video autoplay muted loop playsinline controls style="width: 100%;">
+          <source src="./static/videos/loco_push.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
   </div>
 </section>
 
