@@ -67,6 +67,127 @@ body {
     font-weight: bolder;
 }
 
+/* Affiliation + venue logo row */
+.affiliation-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 36px;
+  margin-top: 10px;
+}
+
+.affiliation-logos a {
+  display: inline-flex;
+}
+
+.affiliation-logos .logo-divider {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, #cfcfcf 20%, #cfcfcf 80%, transparent);
+}
+
+/* Award finalist badge */
+.award-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 100%;
+  margin-top: 18px;
+  padding: 9px 24px 9px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 146, 28, 0.45);
+  background: linear-gradient(135deg, #fffbf1 0%, #fdf2d6 55%, #fae6b3 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 8px 22px -12px rgba(150, 100, 0, 0.55);
+  overflow: hidden;
+  text-align: left;
+  font-family: 'Google Sans', sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.award-badge:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 12px 26px -12px rgba(150, 100, 0, 0.65);
+}
+
+.award-badge__medal {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fff4c7 0%, #f4c740 40%, #c48a08 100%);
+  box-shadow:
+    inset 0 -2px 4px rgba(115, 70, 0, 0.35),
+    0 2px 6px rgba(150, 100, 0, 0.35);
+  color: #fffdf6;
+  font-size: 1.1rem;
+  text-shadow: 0 1px 1px rgba(105, 65, 0, 0.55);
+}
+
+.award-badge__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.award-badge__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a06b00;
+}
+
+.award-badge__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3a2a06;
+}
+
+.award-badge__sponsor {
+  font-weight: 400;
+  color: #86692c;
+}
+
+/* Soft sheen that sweeps across the badge */
+.award-badge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 38%, rgba(255, 255, 255, 0.6) 50%, transparent 62%);
+  transform: translateX(-110%);
+  animation: award-sheen 7s ease-in-out 1s infinite;
+  pointer-events: none;
+}
+
+@keyframes award-sheen {
+  0% { transform: translateX(-110%); }
+  20%, 100% { transform: translateX(110%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .award-badge::after { display: none; }
+  .award-badge { transition: none; }
+}
+
+@media screen and (max-width: 768px) {
+  .affiliation-logos .logo-divider { display: none; }
+
+  .award-badge {
+    border-radius: 18px;
+    padding: 10px 16px 10px 10px;
+  }
+
+  .award-badge__title { font-size: 0.9rem; }
+}
+
 .publication-authors {
 }
 
