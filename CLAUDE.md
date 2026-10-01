@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Static GitHub Pages project page for the paper **SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning** (UCSD ARClab; arXiv 2603.10306; IROS 2026, winner of the IROS Best Mobile Manipulation Paper Award (OMRON Sinic X) and finalist for the Best Application Paper Award (ICROS)). The method is called **ReST-RL**; **SteadyTray** is the task/benchmark name. Both are styled as `<strong style="color: #1a1a1a;">` in body text.
+Static GitHub Pages project page for the paper **SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning** (UCSD ARClab; arXiv 2603.10306; IROS 2026, winner of the IROS Best Mobile Manipulation Paper Award (OMRON Sinic X)). The method is called **ReST-RL**; **SteadyTray** is the task/benchmark name. Both are styled as `<strong style="color: #1a1a1a;">` in body text.
 
 The site is adapted from the Nerfies / UMI-On-Legs template. There is no build step, package manager, linter, or tests. Everything under `main` is served as-is by GitHub Pages.
 
@@ -26,7 +26,7 @@ Headless Chrome screenshots need a time budget or they hang on the YouTube ifram
 ## Structure
 
 - `index.html` holds the whole page. Sections in order: hero (title with logo, authors, affiliation/venue logo row, award badge, link buttons), YouTube teaser, abstract and method figures, real-world video grids, simulation videos, BibTeX, footer.
-- `static/css/index.css` holds the site styles on top of `bulma.min.css`. Much of the page still uses inline `style=""` attributes; the awards block (`.awards`: gold `.award-badge*` for the win, silver `.award-note` for the finalist) and the logo row (`.affiliation-logos`) are the only class-based components added beyond the template.
+- `static/css/index.css` holds the site styles on top of `bulma.min.css`. Much of the page still uses inline `style=""` attributes; the awards block (`.awards` wrapping the gold `.award-badge*`) and the logo row (`.affiliation-logos`) are the only class-based components added beyond the template.
 - `static/js/index.js` is template leftover. It initializes bulma-carousel/slider and preloads interpolation frames from `./static/interpolation/stacked`, which does not exist in this repo. The page doesn't use a carousel or interpolation slider, so 404s for those frames are expected and harmless.
 - Assets: `static/images/` (logos and method figures), `static/videos/*.mp4` (large and committed directly), `static/docs/SteadyTray.pdf` (the Paper button links to it).
 

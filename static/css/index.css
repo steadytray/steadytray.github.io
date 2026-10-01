@@ -163,37 +163,6 @@ body {
   color: #86692c;
 }
 
-.award-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  max-width: 100%;
-  padding: 5px 14px;
-  border-radius: 999px;
-  border: 1px solid #e1e4e8;
-  background: linear-gradient(135deg, #fbfbfc 0%, #f1f3f5 100%);
-  color: #464b53;
-  font-family: 'Google Sans', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-align: left;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.award-note i {
-  color: #9aa2ac;
-}
-
-.award-note:hover {
-  border-color: #c9ced5;
-  color: #2c3036;
-}
-
-.award-note__sponsor {
-  font-weight: 400;
-  color: #7b818a;
-}
-
 /* Soft sheen that sweeps across the badge */
 .award-badge::after {
   content: "";
@@ -224,11 +193,6 @@ body {
   }
 
   .award-badge__title { font-size: 0.9rem; }
-
-  .award-note {
-    border-radius: 14px;
-    font-size: 0.8rem;
-  }
 }
 
 .publication-authors {
