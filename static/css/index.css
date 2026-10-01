@@ -87,7 +87,7 @@ body {
   background: linear-gradient(to bottom, transparent, #cfcfcf 20%, #cfcfcf 80%, transparent);
 }
 
-/* Awards: winner badge + finalist note */
+/* Awards: winner badge */
 .awards {
   display: flex;
   flex-direction: column;
